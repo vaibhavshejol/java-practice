@@ -7,12 +7,6 @@ import java.util.function.IntFunction;
 import java.util.function.Supplier;
 import java.util.function.ToIntFunction;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
-
 public class Demo {
     public static void main(String []args){
 
@@ -31,7 +25,7 @@ public class Demo {
         System.out.println("Addition with static method = "+addition);
 
         //==========================================================================
-        
+
         Supplier<List<String>> newListOfStrings = ArrayList::new; // constructor
         List<String> list = newListOfStrings.get();
         list.add("Vaibhav");
@@ -45,14 +39,4 @@ public class Demo {
         list2.add("Shejol");
         System.out.println(list2);
     }
-}
-
-@Setter
-@Getter
-@ToString
-@AllArgsConstructor
-@NoArgsConstructor
-class Person{
-    int id;
-    String name;
 }
